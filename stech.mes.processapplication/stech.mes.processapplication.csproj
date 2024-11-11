@@ -28,8 +28,8 @@
   <PropertyGroup>
     <BaseOutputPath>$(SolutionDir)bin\</BaseOutputPath>
     <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
-    <Title>plugin for soehnle professional</Title>
-    <Description>plugin for soehnle professionalt</Description>
+    <Title>plugin for Bulk Density System</Title>
+    <Description>plugin for Bulk Density System</Description>
     <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     <PackageTags>iplus-framework;iplus-MES</PackageTags>
