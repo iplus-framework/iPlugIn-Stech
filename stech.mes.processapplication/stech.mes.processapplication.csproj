@@ -50,7 +50,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-   <Reference Include="gip.core.autocomponent, Version=1.0.0.0, Culture=neutral, PublicKeyToken=12adb6357a02d860, processorArchitecture=MSIL">
+    <Reference Include="gip.core.autocomponent, Version=1.0.0.0, Culture=neutral, PublicKeyToken=12adb6357a02d860, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>$(IPlusIncludeDir)\gip.core.autocomponent.dll</HintPath>
     </Reference>
@@ -74,8 +74,11 @@
       <Name>gip.core.processapplication</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="VBControlScripts\" />
+    <None Include="VBControlScripts\2022-09-27 07-54_dlisak.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
