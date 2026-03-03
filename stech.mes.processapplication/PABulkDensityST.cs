@@ -4,6 +4,7 @@ using gip.core.autocomponent;
 using gip.core.processapplication;
 using System.Runtime.Serialization;
 using System.Xml;
+using System.Threading.Tasks;
 
 namespace stech.mes.processapplication
 {
@@ -213,7 +214,7 @@ namespace stech.mes.processapplication
 
 
 
-        public override bool ACDeInit(bool deleteACClassTask = false)
+        public override async Task<bool> ACDeInit(bool deleteACClassTask = false)
         {
             (DensityValue as IACPropertyNetServer).ValueUpdatedOnReceival -= PABulkDensityBDS2ST_ValueUpdatedOnReceival;
             (ProductFlow as IACPropertyNetServer).ValueUpdatedOnReceival -= PABulkDensityBDS2ST_ValueUpdatedOnReceival;
@@ -222,7 +223,7 @@ namespace stech.mes.processapplication
             (DensityCorrFact as IACPropertyNetServer).ValueUpdatedOnReceival -= PABulkDensityBDS2ST_ValueUpdatedOnReceival;
             //if (ApplicationManager != null)
             //    ApplicationManager.ProjectWorkCycleR1sec -= ApplicationManager_ProjectWorkCycleR1sec;
-            return base.ACDeInit(deleteACClassTask);
+            return await base.ACDeInit(deleteACClassTask);
         }
 
 

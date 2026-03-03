@@ -1,5 +1,4 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-  <Import Project="..\..\iPlus\Directory.Build.props" />
   <PropertyGroup>
     <TargetFramework>$(DefaultNetCoreTargetFramework)</TargetFramework>
     <OutputType>Library</OutputType>
@@ -39,27 +38,24 @@
     <PackageReadmeFile>readme.md</PackageReadmeFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="gip.core.autocomponent, Version=1.0.0.0, Culture=neutral, PublicKeyToken=12adb6357a02d860, processorArchitecture=MSIL"  Condition="'$(UseProjectReferences)' != 'true'">
+    <Reference Include="gip.core.autocomponent" Condition="'$(UseProjectReferences)' != 'true'">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>$(IPlusIncludeDir)\gip.core.autocomponent.dll</HintPath>
     </Reference>
     <ProjectReference Include="..\..\iPlus\gip.core.autocomponent\gip.core.autocomponent.csproj" Condition="'$(UseProjectReferences)' == 'true'">
-      <Project>{893D3B1B-DC55-4684-8B5D-941F1049151B}</Project>
       <Name>gip.core.autocomponent</Name>
     </ProjectReference>
-    <Reference Include="gip.core.datamodel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=12adb6357a02d860, processorArchitecture=MSIL"  Condition="'$(UseProjectReferences)' != 'true'">
+    <Reference Include="gip.core.datamodel" Condition="'$(UseProjectReferences)' != 'true'">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>$(IPlusIncludeDir)\gip.core.datamodel.dll</HintPath>
     </Reference>
     <ProjectReference Include="..\..\iPlus\gip.core.datamodel\gip.core.datamodel.csproj" Condition="'$(UseProjectReferences)' == 'true'">
-      <Project>{16FB4111-5110-46E5-851D-38A4D7522F85}</Project>
       <Name>gip.core.datamodel</Name>
     </ProjectReference>
     <Reference Include="gip.core.processapplication" Condition="'$(UseProjectReferences)' != 'true'">
       <HintPath>$(IPlusIncludeDir)\gip.core.processapplication.dll</HintPath>
     </Reference>
     <ProjectReference Include="..\..\iPlus\gip.core.processapplication\gip.core.processapplication.csproj" Condition="'$(UseProjectReferences)' == 'true'">
-      <Project>{66484708-85BD-47C4-92DD-3010387465F4}</Project>
       <Name>gip.core.processapplication</Name>
     </ProjectReference>
   </ItemGroup>
